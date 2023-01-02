@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LandingPage</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body onload="myFunction()">
+  <div class="outerbg"></div>
+  <div class="popup-login-outerbg">
+    <div class="popup-login">
+      <div class="inner-popup-login">
+        <div class="LoginHeader">
+          <p class="loginText">WELCOME BACK</p>
+          <span class="pleaseLogin">Please login to your account</span>
+          <img class="login-close" src="./images/Close_square.svg" alt="close">
+        </div>
+        <form class="formOuter">
+          <div class="form-firistName formList">
+            <label class="fname" for="fname">User name</label>
+            <input type="text" name="firstname" placeholder="Your name.." required>
+          </div>
+          <div class="formList">
+            <p class="LoginPassword">Password</p>
+            <input type="password" placeholder="Enter you password" required>
+            <a class="forgotPassword" href="#">Forgot your password ?</a>
+          </div>
+        </form>
+        <button type="button" class="loginBtn" type="submit">Login</button>
+        <div class="loginBottom">
+          <span class="dontHaveAccount">Dont have an account?
+            <a class="register" href="#">Register</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup-forgotPassword-outerbg">
+    <div class="popup-forgotPassword">
+      <div class="inner-popup-forgotPassword">
+        <div class="LoginHeader">
+          <p class="loginText">Reset Your Password?</p>
+          <img class="resetPassword-close" src="./images/Close_square.svg" alt="close">
+        </div>
+        <form class="formOuter">
+          <div class="formList">
+            <p class="LoginPassword">Enter Your Email</p>
+            <input type="password" placeholder="Please enter your email to verify">
+          </div>
+          <div class="form-firistName formList">
+            <label class="fname" for="fname">New Password</label>
+            <input type="text" id="fname" name="firstname" placeholder="">
+          </div>
+          <div class="form-LastName formList">
+            <label class="lname" for="lname">Confirm Password</label>
+            <input type="text" id="lname" name="lastname" placeholder="">
+          </div>
+          <button type="button" class="loginBtn done">Done</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="logout-popup-outerbg">
+    <div class="popup-logout">
+      <div class="inner-popup-logout">
+        <ion-icon class="alertIcon" name="alert-circle-outline"></ion-icon>
+        <div class="popup-heading">
+          <span class="alertHeading">Are you sure to make changes?</span>
+          <img class="popup-close" src="./images/Close_square.svg" alt="close">
+        </div>
+        <div class="yesNo-Div">
+          <button class="noBtn-popupLogout">No</button>
+          <button class="yesBtn-popupLogout">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="topFixed">
+      <header class="header">
+        <div class="top-left-content">
+          <img class="bluearmourLogo" src="./images/bluearmour_logo.svg" alt="logo">
+        </div>
+        <div class="top-right-content">
+          <div class="searchDiv">
+            <input class="search" placeholder="Search..">
+            <img class="searchIcon" src="./images/Search_alt_light.svg">
+            </input>
+          </div>
+          <div class="gateway">
+            <span class="gatewayText1">Connected Gateways 55</span>
+            <span class="line"></span>
+            <span class="gatewayText2">BRGW-I-431</span>
+            <img class="settingIcon" src="./images/Setting_line_light.svg">
+          </div>
+          <div class="notification">
+            <img class="notification-img" src="./images/Bell_pin_light.svg" alt="img">
+            <section class="notification-sec">
+              <div class="notifications-header">
+                <span class="notification-heading">Notifications</span>
+                <img class="noti-close-btn" src="./images/Close_square.svg" alt="close">
+              </div>
+              <div class="notifications-contents">
+                <div class="notifications-outer">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Info_fill.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+
+                <div class="notifications-outer notifications-outer1">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Bell_pin_light.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2 notifications-outer3">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+                <div class="notifications-outer notifications-outer2">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Info_fill.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+
+                <div class="notifications-outer notifications-outer3">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Bell_pin_light.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+
+                <div class="notifications-outer notifications-outer4">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Info_fill.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="adminContent">
+            <p class="joanne-logan">Joanne Logan</p>
+            <p class="adminstratorText">Adminstrator</p>
+            <a href="./login.html"> <img class="userImg" src="./images/User_box_light.svg" alt="userImg">
+            </a>
+            <div class="adminProfile">
+              <img class="profileClose" src="./images/Close_round_whiteCr.svg" alt="img_close">
+              <h4 class="user_profile">User Profile</h4>
+              <!-- <ion-icon class="profileIcon" name="person-circle-outline"></ion-icon> -->
+              <img class="profileIcon" src="./images/person_profile_pic.svg" alt="pic">
+              <p class="Administrator_txt"> Administrator</p>
+              <div class="profileLeft">
+                <div class="profile_list">
+                  <img src="./images/p1.svg" alt="img">
+                  <p>Ahish M</p>
+                </div>
+                <div class="profile_list">
+                  <img src="./images/p2.svg" alt="img">
+                  <a class="a-profile" href="mailto:someone@example.com">ahishm430@gmail.com</a>
+                </div>
+                <div class="profile_list">
+                  <img src="./images/p3.svg" alt="img">
+                  <a class="a-profile" href="tel:+4733378901">+47 333 78 901</a>
+                </div>
+                <div class="profile_list">
+                  <img src="./images/p4.svg" alt="img">
+                  <p>Coimbatore</p>
+                </div>
+                <p class="login">Login</p>
+                <p class="logout">Logout</p>
+              </div>
+            </div>
+          </div>
+          <div class="threeDotMenu">
+            <img class="threeDotMenu-img" src="./images/menuBarButton.svg" alt="menu">
+            <img class="threeDotMenu-img-mobile" src="./images/Close_square.svg" alt="close">
+          </div>
+        </div>
+      </header>
+      <section class="menuSec">
+        <nav class="menuBar">
+          <div class="menuItems dashboard menuItems1">
+            <img class="menu-pic" src="./images/darhboard_alt.svg" alt="dashboard">
+            <a href="./index.html">
+              <span class="menuItems2">Dashboard
+              </span>
+            </a>
+          </div>
+          <div class="menuItems menuItems1 explore">
+            <img class="menu-pic" src="./images/explore.svg" alt="dashboard">
+            <span class="menuItems2 exploreText">Explore</span>
+            <img class="down-arrow" src="./images/Expand_down_menu.svg" alt="menu">
+          </div>
+          <ul class="exploreSubmenu">
+            <li class="liActive">
+              <a class="identityManagement" href="./IdentityManagement.html">Identity Management</a>
+            </li>
+            <li><a href="https://www.google.com/">Resource Management</a></li>
+            <li><a href="https://www.google.com/">Resource List Management</a></li>
+            <li><a href="https://www.google.com/">Rules Management</a></li>
+          </ul>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/network.svg" alt="dashboard">
+            <span class="menuItems2">Management Network</span>
+          </div>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/gateway.svg" alt="dashboard">
+            <span class="menuItems2">Gateway Services</span>
+          </div>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/endpoint.svg" alt="dashboard">
+            <span class="menuItems2">Endpoint</span>
+          </div>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/maintenence.svg" alt="dashboard">
+            <span class="menuItems2">Maintenence</span>
+          </div>
+          <div class="menuItems monitoring menuItems1">
+            <img class="menu-pic" src="./images/monitoring.svg" alt="dashboard">
+            <span class="menuItems2">Monitoring</span>
+          </div>
+          <div class="adminContent MobileadminContent">
+            <p class="joanne-logan">Joanne Logan</p>
+            <p class="adminstratorText">Adminstrator</p>
+            <img class="userImg" src="./images/User_box_light.svg" alt="userImg">
+          </div>
+          <div class="notification-mobile menuItems">
+            <img class="notification-img-mobile notification-img" src="./images/Bell_pin_light.svg" alt="">
+            <span class="noti-text-mobile">Notification</span>
+          </div>
+          <div class="searchDiv mobileSearch menuItems">
+            <input class="search  " placeholder="Search..">
+            <img class="searchIcon" src="./images/Search_alt_light.svg">
+            </input>
+          </div>
+        </nav>
+      </section>
+    </div>
+    <div class="innerContainer">
+      <div class="left-section">
+        <div class="currentPage">
+          <p class="dashboardText">Dashboard</p>
+          <p class="homeText"> Home <span>></span>Dashboard</p>
+        </div>
+        <section class="token-sec">
+          <div class="headingContainer">
+            <p class="tokensText">TOKENS</p>
+            <div class="token-period">
+              <span class="week">1 Week </span>
+              <img class="tokenHamburger" src="./images/hambarekarToken.svg" alt="token">
+              <ul class="token-Dropdown">
+                <li class="liActive token1">1 Month</li>
+                <li class="token2">6 Month</li>
+                <li class="token3">1 Year</li>
+                <li class="token4">24 Hours</li>
+              </ul>
+            </div>
+            <img class="heading-hambarekar" src="./images/Hambarekar Icon.svg" alt="menu">
+            <div class="edit-delete">
+              <div class="edit">
+                <img src="./images/editing.png" alt="edit">
+                <p>Edit</p>
+              </div>
+              <div class="delete">
+                <img src="./images/delete.png" alt="del">
+                <p>Delete</p>
+              </div>
+            </div>
+          </div>
+          <div class="token-content">
+            <div class="tokenItems inserted">
+              <img class="tokenImg" src="./images/inserted.svg" alt="inserted">
+              <span class="tokenItems-text tokenItems-text1 ">Inserted</span>
+              <span class="tokenItems-no tokenItems-no1">95</span>
+            </div>
+            <div class="tokenItems collision">
+              <img class="tokenImg" src="./images/collision.svg" alt="collision">
+              <span class="tokenItems-text tokenItems-text2">Collision</span>
+              <span class="tokenItems-no tokenItems-no2">52</span>
+            </div>
+            <div class="tokenItems notfound">
+              <img class="tokenImg" src="./images/notfound (2).svg" alt="notfound">
+              <span class="tokenItems-text tokenItems-text3">Not Found</span>
+              <span class="tokenItems-no tokenItems-no3">37</span>
+            </div>
+            <div class="tokenItems tcp">
+              <img class="tokenImg" src="./images/tcp.svg" alt="tcp">
+              <span class="tokenItems-text tokenItems-text4">Tcp Packets In</span>
+              <span class="tokenItems-no tokenItems-no4">41</span>
+            </div>
+            <div class="tokenItems1">
+              <div class="tokenItems tcp">
+                <img class="tokenImg" src="./images/tcp.svg" alt="tcp">
+                <span class="tokenItems-text tokenItems-text4">Tcp Packets In</span>
+                <span class="tokenItems-no tokenItems-no4">41</span>
+              </div>
+            </div>
+            <div class="tokenItems1">
+              <div class="tokenItems tcp">
+                <img class="tokenImg" src="./images/tcp.svg" alt="tcp">
+                <span class="tokenItems-text tokenItems-text4">Tcp Packets In</span>
+                <span class="tokenItems-no tokenItems-no4">41</span>
+              </div>
+            </div>
+            <div class="tokenItems1">
+              <div class="tokenItems tcp">
+                <img class="tokenImg" src="./images/tcp.svg" alt="tcp">
+                <span class="tokenItems-text tokenItems-text4">Tcp Packets In</span>
+                <span class="tokenItems-no tokenItems-no4">41</span>
+              </div>
+            </div>
+            <div class="tokenItems1">
+              <div class="tokenItems tcp">
+                <img class="tokenImg" src="./images/tcp.svg" alt="tcp">
+                <span class="tokenItems-text tokenItems-text4">Tcp Packets In</span>
+                <span class="tokenItems-no tokenItems-no4">41</span>
+              </div>
+            </div>
+          </div>
+          <button class="viewMore-Btn">View More
+          </button>
+        </section>
+      </div>
+
+      <div class="right-section">
+        <section class="identities-sec sub-right-content">
+          <div class="headingContainer">
+            <span class="headingText">IDENTITIES</span>
+            <img class="heading-hambarekar" src="./images/Hambarekar Icon.svg" alt="menu">
+            <div class="edit-delete">
+              <div class="edit">
+                <img src="./images/editing.png" alt="edit">
+                <p>Edit</p>
+              </div>
+              <div class="delete">
+                <img src="./images/delete.png" alt="del">
+                <p>Delete</p>
+              </div>
+            </div>
+          </div>
+          <div class="outer-right-section">
+            <div class="inner-right-section sub-inner-right-section1">
+              <img src="./images/Test Icon.svg" alt="test">
+              <span class="identitiesText">Test</span>
+              <span class="identitiesNo sub-identities-no1">45</span>
+            </div>
+
+            <div class="inner-right-section sub-inner-right-section2">
+              <img src="./images/Engineer Icon.svg" alt="test">
+              <span class="identitiesText">Engineer</span>
+              <span class="identitiesNo sub-identities-no2">40</span>
+            </div>
+            <div class="inner-right-section sub-inner-right-section3">
+              <img src="./images/Developer Icon.svg" alt="test">
+              <span class="identitiesText">Developer</span>
+              <span class="identitiesNo sub-identities-no3">25</span>
+            </div>
+          </div>
+          <button class="viewMore-Btn-identities">View More
+          </button>
+        </section>
+        <section class="rules-sec sub-right-content">
+          <div class="headingContainer">
+            <span class="headingText headingText-rules">RULES</span>
+            <img class="heading-hambarekar" src="./images/Hambarekar Icon.svg" alt="menu">
+            <div class="edit-delete">
+              <div class="edit">
+                <img src="./images/editing.png" alt="edit">
+                <p>Edit</p>
+              </div>
+              <div class="delete">
+                <img src="./images/delete.png" alt="del">
+                <p>Delete</p>
+              </div>
+            </div>
+          </div>
+          <div class="outer-right-section">
+            <div class="sub-inner-right-section-rules inner-right-section sub-inner-right-section1 ">
+              <img src="./images/Foreward Icon.svg" alt="test">
+              <span class="identitiesText">Forward</span>
+              <span class="identitiesNo sub-identities-no1">45</span>
+            </div>
+
+            <div class="sub-inner-right-section-rules inner-right-section sub-inner-right-section3 ">
+              <img src="./images/Discard Icon.svg" alt="test">
+              <span class="identitiesText">Discard</span>
+              <span class="identitiesNo sub-identities-no3">25</span>
+            </div>
+          </div>
+        </section>
+        <section class="services-sec sub-right-content">
+          <div class="headingContainer">
+            <span class="headingText-services headingText ">SERVICES</span>
+            <img class="heading-hambarekar" src="./images/Hambarekar Icon.svg" alt="menu">
+            <div class="edit-delete">
+              <div class="edit">
+                <img src="./images/editing.png" alt="edit">
+                <p>Edit</p>
+              </div>
+              <div class="delete">
+                <img src="./images/delete.png" alt="del">
+                <p>Delete</p>
+              </div>
+            </div>
+          </div>
+          <div class="outer-services">
+            <div class="inner-services">
+              <span class="servicesText">Distributed Processing</span>
+              <span class="servicesOff"></span>
+            </div>
+            <div class="inner-services">
+              <span class="servicesText">IAS</span>
+              <span class="servicesOff"></span>
+            </div>
+            <div class="inner-services">
+              <span class="servicesText">Layer 3</span>
+              <span class="servicesOff"></span>
+            </div>
+            <div class="inner-services">
+              <span class="servicesText">Subscriber</span>
+              <span class="servicesOn"></span>
+            </div>
+            <div class="inner-services">
+              <span class="servicesText">Publisher</span>
+              <span class="Pub servicesOn"></span>
+            </div>
+            <div class="inner-services">
+              <span class="servicesText">Remote Keying</span>
+              <span class="servicesOn"></span>
+            </div>
+          </div>
+          <div class="services-popup-outerbg">
+            <div class="popup-services">
+              <div class="inner-popup-services">
+                <ion-icon class="alertIcon" name="alert-circle-outline"></ion-icon>
+                <div class="popup-heading">
+                  <span class="alertHeading">Are you sure to make changes?</span>
+                  <img class="popup-close" src="./images/Close_square.svg" alt="close">
+                </div>
+                <div class="yesNo-Div">
+                  <button class="noBtn">No</button>
+                  <button class="yesBtn">Yes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="trustLevel-sec sub-right-content">
+          <div class="headingContainer">
+            <span class="trustlevel-Heading">TRUST LEVEL</span>
+            <img class="heading-hambarekar" src="./images/Hambarekar Icon.svg" alt="menu">
+            <div class="edit-delete">
+              <div class="edit">
+                <img src="./images/editing.png" alt="edit">
+                <p>Edit</p>
+              </div>
+              <div class="delete">
+                <img src="./images/delete.png" alt="del">
+                <p>Delete</p>
+              </div>
+            </div>
+          </div>
+          <div class="outer-trustlevel">
+            <div>
+              <img src="./images/Sum Of Identities Chart.svg" alt="pic">
+            </div>
+            <div>
+              <img class="levelPic" src="./images/levels.svg" alt="pic">
+            </div>
+            <div>
+              <img src="./images/Sum Of Rules Chart.svg" alt="pic">
+            </div>
+          </div>
+        </section>
+        <section class="summary sub-right-content">
+          <div class="headingContainer">
+            <span class="summaryHeading">SUMMARY</span>
+            <img class="heading-hambarekar" src="./images/Hambarekar Icon.svg" alt="menu">
+            <div class="edit-delete">
+              <div class="edit">
+                <img src="./images/editing.png" alt="edit">
+                <p>Edit</p>
+              </div>
+              <div class="delete">
+                <img src="./images/delete.png" alt="del">
+                <p>Delete</p>
+              </div>
+            </div>
+          </div>
+          <div class="outer-summary">
+            <div class="inner-summary">
+              <p class="circle"></p>
+              <span class="summaryText-settings">Host Name</span>
+              <p class="summeryNo">10.0.10.10</p>
+            </div>
+
+            <div class="inner-summary">
+              <p class="circle"></p>
+              <span class="summaryText-settings">FQDN</span>
+              <p class="summeryNo">Alpha-GW.infovision.io</p>
+            </div>
+
+            <div class="inner-summary">
+              <p class="circle"></p>
+              <span class="summaryText-settings">Host Name</span>
+              <p class="summeryNo">Not Configured</p>
+            </div>
+            <div class="inner-summary">
+              <p class="circle"></p>
+              <span class="summaryText-settings">Version</span>
+              <p class="summeryNo">4.3.1.1_1</p>
+            </div>
+            <div class="inner-summary">
+              <p class="circle"></p>
+              <span class="summaryText-settings">Host Name</span>
+              <p class="summeryNo">Not Configured</p>
+            </div>
+            <div class="inner-summary">
+              <p class="circle"></p>
+              <span class="summaryText-settings">Uptime</span>
+              <p class="summeryNo">41 hrs, 44 mins. 44 sec</p>
+            </div>
+            <div class="inner-summary">
+              <p class="circleRed"></p>
+              <span class="summaryText-settings">Certificate Expiry</span>
+              <p class="summeryNo sub-summeryNo7">Sat, July 13, 2021 3:11:46 PM</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="footerText"> &copy; 2021 Bluearmor | All Rights Reserved</span>
+    </footer>
+  </div>
+  <div class="loader">
+    <img class="loader_img" src="./images/gifImg.gif" alt="img">
+  </div>
+  <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+  <script src="./js/landingPage.js"></script>
+  <script>
+    var myVar;
+    function myFunction() {
+      myVar = setTimeout(showPage, 1000);
+    }
+    function showPage() {
+      document.getElementsByClassName("loader")[0].style.display = "none";
+      document.getElementsByClassName("container")[0].style.display = "block";
+    }
+
+  </script>
+</body>
+
+</html>

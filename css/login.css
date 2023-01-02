@@ -1,0 +1,25 @@
+.popup-login-outerbg {
+  display: block;
+  background: unset;
+  position: unset;
+}
+input {
+  background: unset;
+}
+.popup-login {
+  position: unset;
+  margin: unset;
+  background: unset;
+}
+.container {
+  background: url(../images/fullbg.png) no-repeat;
+  background-position: 85% 48%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.bgImg_outer img {
+  margin-right: 327px;
+  margin-top: 91px;
+}

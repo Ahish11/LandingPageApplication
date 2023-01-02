@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdentityManagement</title>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/identityManagement.css">
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+</head>
+
+<body>
+  <div class="outerbg"></div>
+  <div class="tableContainer">
+    <div class="popup-login-outerbg">
+      <div class="popup-login">
+        <div class="inner-popup-login">
+          <div class="LoginHeader">
+            <p class="loginText">WELCOME BACK</p>
+            <span class="pleaseLogin">Please login to your account</span>
+            <img class="login-close" src="./images/Close_square.svg" alt="close">
+          </div>
+          <form class="formOuter">
+            <div class="form-firistName formList">
+              <label class="fname" for="fname">User name</label>
+              <input type="text" name="firstname" placeholder="Your name.." required>
+            </div>
+            <div class="formList">
+              <p class="LoginPassword">Password</p>
+              <input type="password" placeholder="Enter you password" required>
+              <a class="forgotPassword" href="#">Forgot your password ?</a>
+            </div>
+          </form>
+          <button type="button" class="loginBtn" type="submit">Login</button>
+          <div class="loginBottom">
+            <span class="dontHaveAccount">Dont have an account?
+              <a class="register" href="#">Register</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup-forgotPassword-outerbg">
+      <div class="popup-forgotPassword">
+        <div class="inner-popup-forgotPassword">
+          <div class="LoginHeader">
+            <p class="loginText">Reset Your Password?</p>
+            <img class="resetPassword-close" src="./images/Close_square.svg" alt="close">
+          </div>
+          <form class="formOuter">
+            <div class="formList">
+              <p class="LoginPassword">Enter Your Email</p>
+              <input type="password" placeholder="Please enter your email to verify">
+            </div>
+            <div class="form-firistName formList">
+              <label class="fname" for="fname">New Password</label>
+              <input type="text" id="fname" name="firstname" placeholder="">
+            </div>
+            <div class="form-LastName formList">
+              <label class="lname" for="lname">Confirm Password</label>
+              <input type="text" id="lname" name="lastname" placeholder="">
+            </div>
+            <button type="button" class="loginBtn done">Done</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="logout-popup-outerbg">
+      <div class="popup-logout">
+        <div class="inner-popup-logout">
+          <ion-icon class="alertIcon" name="alert-circle-outline"></ion-icon>
+          <div class="popup-heading">
+            <span class="alertHeading">Are you sure to make changes?</span>
+            <img class="popup-close" src="./images/Close_square.svg" alt="close">
+          </div>
+          <div class="yesNo-Div">
+            <button class="noBtn-popupLogout">No</button>
+            <button class="yesBtn-popupLogout">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topFixed">
+      <header class="header">
+        <div class="top-left-content">
+          <img class="bluearmourLogo" src="./images/bluearmour_logo.svg" alt="logo">
+        </div>
+        <div class="top-right-content">
+          <div class="searchDiv">
+            <input class="search" placeholder="Search..">
+            <img class="searchIcon" src="./images/Search_alt_light.svg">
+            </input>
+          </div>
+          <div class="gateway">
+            <span class="gatewayText1">Connected Gateways 55</span>
+            <span class="line"></span>
+            <span class="gatewayText2">BRGW-I-431</span>
+            <img class="settingIcon" src="./images/Setting_line_light.svg">
+          </div>
+          <div class="notification">
+            <img class="notification-img" src="./images/Bell_pin_light.svg" alt="img">
+            <section class="notification-sec">
+              <div class="notifications-header">
+                <span class="notification-heading">Notifications</span>
+                <img class="noti-close-btn" src="./images/Close_square.svg" alt="close">
+              </div>
+              <div class="notifications-contents">
+                <div class="notifications-outer">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Info_fill.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+
+                <div class="notifications-outer notifications-outer1">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Bell_pin_light.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2 notifications-outer3">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+                <div class="notifications-outer notifications-outer2">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Info_fill.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+
+                <div class="notifications-outer notifications-outer3">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Bell_pin_light.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+
+                <div class="notifications-outer notifications-outer4">
+                  <div class="notifications-inner1">
+                    <img class="noti-inner-pic" src="./images/Info_fill.svg" alt="info">
+                    <span class="noti-inner1-text">BRGW-I-477: A new gateway Added
+                      successfully</span>
+                  </div>
+                  <div class="notifications-inner2">
+                    <img class="noti-inner-pic" src="./images/Time.svg" alt="bell">
+                    <span class="noti-time">30 Min Ago</span>
+                    <img class="notiDelete" src="./images/removeNoti.svg" alt="remove">
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="adminContent">
+            <p class="joanne-logan">Joanne Logan</p>
+            <p class="adminstratorText">Adminstrator</p>
+            <a href="./login.html"> <img class="userImg" src="./images/User_box_light.svg" alt="userImg">
+            </a>
+            <div class="adminProfile">
+              <img class="profileClose" src="./images/Close_square.svg" alt="">
+              <h4 class="user_profile">User Profile</h4>
+              <ion-icon class="profileIcon" name="person-circle-outline"></ion-icon>
+              <div class="profileLeft">
+                <p>Ahish M</p>
+                <div>
+                  <a class="a-profile" href="mailto:someone@example.com">ahishm430@gmail.com</a>
+                </div>
+                <div>
+                  <a class="a-profile" href="tel:+4733378901">+47 333 78 901</a>
+                </div>
+                <p>Coimbatore</p>
+                <p class="login">Login</p>
+                <p class="logout">Logout</p>
+              </div>
+            </div>
+          </div>
+          <div class="threeDotMenu">
+            <img class="threeDotMenu-img" src="./images/menuBarButton.svg" alt="menu">
+            <img class="threeDotMenu-img-mobile" src="./images/Close_square.svg" alt="close">
+          </div>
+        </div>
+      </header>
+      <section class="menuSec">
+        <nav class="menuBar">
+          <div class="menuItems dashboard menuItems1">
+            <img class="menu-pic" src="./images/darhboard_alt.svg" alt="dashboard">
+            <a href="./index.html">
+              <span class="menuItems2">Dashboard
+              </span>
+            </a>
+          </div>
+          <div class="menuItems menuItems1 explore">
+            <img class="menu-pic" src="./images/explore.svg" alt="dashboard">
+            <span class="menuItems2 exploreText">Explore</span>
+            <img class="down-arrow" src="./images/Expand_down_menu.svg" alt="menu">
+          </div>
+          <ul class="exploreSubmenu">
+            <li class="liActive">
+              <a class="identityManagement" href="./IdentityManagement.html">Identity Management</a>
+            </li>
+            <li><a href="https://www.google.com/">Resource Management</a></li>
+            <li><a href="https://www.google.com/">Resource List Management</a></li>
+            <li><a href="https://www.google.com/">Rules Management</a></li>
+          </ul>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/network.svg" alt="dashboard">
+            <span class="menuItems2">Management Network</span>
+          </div>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/gateway.svg" alt="dashboard">
+            <span class="menuItems2">Gateway Services</span>
+          </div>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/endpoint.svg" alt="dashboard">
+            <span class="menuItems2">Endpoint</span>
+          </div>
+          <div class="menuItems menuItems1">
+            <img class="menu-pic" src="./images/maintenence.svg" alt="dashboard">
+            <span class="menuItems2">Maintenence</span>
+          </div>
+          <div class="menuItems monitoring menuItems1">
+            <img class="menu-pic" src="./images/monitoring.svg" alt="dashboard">
+            <span class="menuItems2">Monitoring</span>
+          </div>
+          <div class="adminContent MobileadminContent">
+            <p class="joanne-logan">Joanne Logan</p>
+            <p class="adminstratorText">Adminstrator</p>
+            <img class="userImg" src="./images/User_box_light.svg" alt="userImg">
+          </div>
+          <div class="notification-mobile menuItems">
+            <img class="notification-img-mobile notification-img" src="./images/Bell_pin_light.svg" alt="">
+            <span class="noti-text-mobile">Notification</span>
+          </div>
+          <div class="searchDiv mobileSearch menuItems">
+            <input class="search  " placeholder="Search..">
+            <img class="searchIcon" src="./images/Search_alt_light.svg">
+            </input>
+          </div>
+        </nav>
+      </section>
+    </div>
+    <section class="tableSec">
+      <section class="filter-sec">
+        <div class="currentPage-identityManagement">
+          <p class="dashboardText">Identity Management</p>
+          <p class="homeText">Explore <span>></span>Identity Management</p>
+        </div>
+        <div class="rightTableFilters">
+          <div class="tableSearch">
+            <input class="table-search-input" placeholder="Search..">
+            <img class="table-searchIcon" src="./images/Search_alt_light.svg">
+            </input>
+          </div>
+          <div class="view">
+            <p class="list">List</p>
+            <p class="grid">Grid</p>
+          </div>
+          <div class="sixFilter">
+            <div class="filter">
+              <img src="./images/tableFilter.svg" alt="img">
+              <p>Filter</p>
+            </div>
+
+            <div class="import">
+              <img src="./images/importTable.svg" alt="img">
+              <p>Import</p>
+            </div>
+
+            <div class="add-identities">
+              <img class="addIdentnties-icon" src="./images/addidentities.svg" alt="img">
+              <p>Add Identities</p>
+            </div>
+
+            <div class="ItemsPer-page">
+              <div class="itemsPageNo">
+                <p class="no">10</p>
+              </div>
+              <p>Items per Page</p>
+            </div>
+
+            <div class="pageof">
+              <p>Page 1 of 10</p>
+              <img src="./images/Expand_down_menu.svg" alt="img">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="popup_edit_outerbg">
+        <div class="popup_table_edit">
+          <div class="edit_heading_outer">
+            <img class="edit_heading_img" src="./images/edit_popUp.svg" alt="edit">
+            <h4 class="edit_heading">Identity Management Edit</h4>
+          </div>
+          <div class="inner_table">
+            <div class="close-header">
+              <img class="close_icon" src="./images/closetable.svg" alt="close">
+            </div>
+            <form class="table_formOuter">
+              <div class="outer_input">
+                <label class="fname" for="fname">Name</label>
+                <input class="row1_input" id="" type="text" placeholder="">
+              </div>
+              <div class="outer_input">
+                <label class="fname" for="fname">Group</label>
+                <input class="row2_input" type="text" name="firstname" placeholder="">
+              </div>
+              <div class="outer_input">
+                <label class="lname" for="lname">Trust Level</label>
+                <input class="row3_input" type="text" name="lastname" placeholder="">
+              </div>
+              <div class="outer_input">
+                <label class="lname" for="lname">IP Address/Prefix MAC</label>
+                <input class="row4_input" type="text" name="lastname" placeholder="">
+              </div>
+
+              <div class="outer_input">
+                <label class="lname" for="lname">TCP Tagging</label>
+                <input class="row6_input" type="text" name="lastname" placeholder="" required>
+              </div>
+              <div class="remote_key_status">
+                <div class="outer_input">
+                  <label class="remote_key_text" for="lname">Remote Key</label>
+                  <div class="switch">
+                    <input type="checkbox" id="switch" class="checkbox" />
+                    <label for="switch" class="toggle">
+                      <p class="enable_disable_outer">True <span class="empty_space_rk"></span>
+                        <span class="false_disable">False</span>
+                      </p>
+                    </label>
+                  </div>
+                </div>
+                <div class="status_outer row8_input">
+                  <label class="status_text">Status</label>
+                  <!-- <p class="default_btn"></p> -->
+                  <div class="switch_status">
+                    <input type="checkbox" id="switch_status" class="checkbox" />
+                    <label for="switch_status" class="toggle">
+                      <p class="enable_disable_outer">Enable
+                        <span class="empty_space_status"></span>
+                        <span class="false_disable"></spanclass>Disable</span>
+                      </p>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="outer_input">
+                <label class="lname comment_text" for="lname">Comment</label>
+                <textarea
+                  class="row5_input">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, praesentium voluptatem, perspiciatis architecto, sequi doloremque sint ut dolores ratione accusamus itaque esse eveniet! Similique eos quos eum iusto. Perspiciatis, repudiandae!</textarea>
+              </div>
+            </form>
+          </div>
+          <div class="outer_btn">
+            <button type="button" class="cancelBtn_edit">Cancel</button>
+            <button type="button" class="submitBtn_edit">Save Changes</button>
+          </div>
+        </div>
+      </section>
+      <table class="tableContent">
+        <tr class="table_heading">
+          <th>Name</th>
+          <th>Group</th>
+          <th class="trustLevel">Trust Level</th>
+          <th>IP Address/Prefix MAC</th>
+          <th class="comment_td">Comment</th>
+          <th class="tcp_tagging">Tcp Tagging</th>
+          <th>Remote Key</th>
+          <th>Status</th>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust1</td>
+          <td class="row2">Identies</td>
+          <td class="row3">
+            <div class="trustLevel-circle1">
+              <p class="trustLevel-no">08</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="row5">Dolor sit amet</td>
+          <td class="row6">SEQ</td>
+          <td class="false  row7">False</td>
+          <td class="status_content">
+            <div class="disableDiv row8">
+              <p class="EnabledBtn disableBtn">Disabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="">
+            </div>
+          </td>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust2</td>
+          <td class="row2">Identies</td>
+          <td class="row3">
+            <div class="trustLevel-circle1">
+              <p class="trustLevel-no">06</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="row5">Dolor sit amet</td>
+          <td class="row6">SEQ</td>
+          <td class="false row7">False</td>
+          <td class="status_content row8">
+            <div class="disableDiv">
+              <p class="EnabledBtn disableBtn">Disabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="">
+            </div>
+          </td>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust3</td>
+          <td class="row2">Rules</td>
+          <td class="row3">
+            <div class="trustLevel-circle1 trustLevel_circle2">
+              <p class="trustLevel-no">05</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="row5">Dolor sit amet</td>
+          <td class="row6">SEQ</td>
+          <td class="false row7">False</td>
+          <td class="status_content row8">
+            <div class="disableDiv">
+              <p class="EnabledBtn disableBtn">Disabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="">
+            </div>
+          </td>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust4</td>
+          <td class="row2">Rules</td>
+          <td class="row3">
+            <div class="trustLevel-circle1">
+              <p class="trustLevel-no">07</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="comment_td row5">Dolor sit amet</td>
+          <td class="row6">SEQ</td>
+          <td class="false row7">False</td>
+          <td class="status_content row8">
+            <div class="disableDiv">
+              <p class="EnabledBtn disableBtn">Disabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="">
+            </div>
+          </td>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust5</td>
+          <td class="row2">Endpoints</td>
+          <td class="row3">
+            <div class="trustLevel-circle1 trustLevel_circle2">
+              <p class="trustLevel-no">01</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="comment_td row5">Dolor sit amet Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            praesentiumsantium?</td>
+          <td class="row6">SEQ</td>
+          <td class="true row7">True</td>
+          <td class="status_content row8">
+            <div class="EnabledDiv">
+              <p class="EnabledBtn">Enabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="img">
+            </div>
+          </td>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust6</td>
+          <td class="row2">Endpoints</td>
+          <td class="row3">
+            <div class="trustLevel-circle1 trustLevel_circle2">
+              <p class="trustLevel-no">01</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="comment_td row5">Dolor sit amet</td>
+          <td class="row6">SEQ</td>
+          <td class="false row7">False</td>
+          <td class="status_content row8">
+            <div class="EnabledDiv">
+              <p class="EnabledBtn">Enabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="img">
+            </div>
+          </td>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust7</td>
+          <td class="row2">Endpoints</td>
+          <td class="row3">
+            <div class="trustLevel-circle1 trustLevel_circle2">
+              <p class="trustLevel-no">04</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="comment_td row5"> aliquam, molestiae quae reiciendis fugit neque! Accu sit amet</td>
+          <td class="row6">SEQ</td>
+          <td class="true row7">True</td>
+          <td class="status_content row8">
+            <div class="EnabledDiv">
+              <p class="EnabledBtn">Enabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="img">
+            </div>
+          </td>
+        </tr>
+        <tr class="table_tr">
+          <td class="row1">Alphatrust8</td>
+          <td class="row2">Endpoints</td>
+          <td class="row3">
+            <div class="trustLevel-circle1 trustLevel_circle2">
+              <p class="trustLevel-no">02</p>
+            </div>
+          </td>
+          <td class="row4">100.0.20/32</td>
+          <td class="comment_td row5">Dolor sit Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Dicta mollitia, nam sequi voluptatem ab maxime explicabo, magni exercitationem obcaecati
+            voluptates harum illum a adipisci dolores sunt consequatur vitae autem. Quibusdam. amet</td>
+          <td class="row6">SEQ</td>
+          <td class="true row7">True</td>
+          <td class="status_content row8">
+            <div class="EnabledDiv">
+              <p class="EnabledBtn">Enabled</p>
+              <div class="edit_delete_table">
+                <div class="edit">
+                  <img src="./images/editing.png" alt="edit">
+                  <p>Edit</p>
+                </div>
+                <div class="delete">
+                  <img src="./images/delete.png" alt="del">
+                  <p>Delete</p>
+                </div>
+              </div>
+            </div>
+          </td>
+          <td class="outer_menu">
+            <div class="table_outer_menu">
+              <img class="table_menu_pic" src="./images/tablemenu.svg" alt="img">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/landingPage.js"></script>
+  <script src="./js/im.js"></script>
+</body>
+
+</html>
